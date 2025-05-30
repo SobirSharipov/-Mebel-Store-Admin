@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button class="AddnewProduct">NEW PRODUCTS</button>
+    <dialog class="Adddialog">
+        <form class="Addform">
+            <input type="text" name="AddName" placeholder="Name..."><BR></BR>
+            <input type="text" name="AddBrend" placeholder="Brend..."><BR></BR>
+            <input type="text" name="Addlorem" placeholder="Categori..."><BR></BR>
+            <input type="text" name="Addimg" placeholder="img..."><BR></BR>
+            <input type="text" name="AddPrace" placeholder="Prace..."><BR></BR>
+            <input type="text" name="AddColor" placeholder="Color..."><BR></BR>
+            <select name="AddSelect">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <button class="AddSave">Save</button>
+        </form>
+    </dialog>
+    <dialog class="Editdialog">
+        <form class="Editform">
+            <input type="text" name="EditName" placeholder="Name..."><BR></BR>
+            <input type="text" name="EditBrend" placeholder="Brend..."><BR></BR>
+            <input type="text" name="Editlorem" placeholder="Categori..."><BR></BR>
+            <input type="text" name="Editimg" placeholder="img..."><BR></BR>
+            <input type="text" name="EditPrace" placeholder="Prace..."><BR></BR>
+            <input type="text" name="EditColor" placeholder="Color..."><BR></BR>
+            <select name="EditSelect">
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <button >Save</button>
+        </form>
+    </dialog>
+     <div class="continerbox">
+    <div class="searchbox">
+        <input type="text" class="search" placeholder="Search for products..."><BR></BR>
+        <h1>Company</h1><br>
+        <select class="Selectsearch">
+            <option value="All">All</option>
+            <option value="Ikea">Ikea</option>
+            <option value="Marcos">Marcos</option>
+            <option value="Caressa">Caressa</option>
+            <option value="Liddy">Liddy</option>
+        </select><BR></BR>
+        <input type="range" class="range" min="10" max="1000" step="5" value="0">
+        <p>Value: $<span class="rangeValue">0</span></p>
+    </div>
+    <div class="box"></div>
+ </div>
+    
+    <script type="module" src="./jsFail/main.js"></script>
+</body>
+</html>

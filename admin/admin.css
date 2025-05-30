@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+
+
+.box{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.imgadmin{
+    width: 250px;
+    height: 200px;
+    border-radius: 10px;
+}
+.continerbox{
+    display: flex;
+    justify-content: space-around;
+}
+.searchbox{
+    margin: 100px;
+}
+.Selectsearch{
+    width: 150px;
+    padding: 5px;
+    background-color: #BA5D2C;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.search{
+    width: 200px;
+    padding: 10px;
+    border-radius: 10px;
+}
+.Brend{
+      font-family: Charm;
+font-weight: 700;
+font-size: 30px;
+line-height: 120%;
+letter-spacing: 0%;
+    color: #23527580;
+}
+.size-6{
+    width: 20px;
+}
