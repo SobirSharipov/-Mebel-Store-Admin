@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="./admin.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
+
 <body>
-    <button class="AddnewProduct">NEW PRODUCTS</button>
+
     <dialog class="Adddialog">
         <form class="Addform">
             <input type="text" name="AddName" placeholder="Name..."><BR></BR>
@@ -36,26 +38,42 @@
                 <option value="Active">Active</option>
                 <option value="Inactive">Inactive</option>
             </select>
-            <button >Save</button>
+            <button class="EditSave">Save</button>
         </form>
     </dialog>
-     <div class="continerbox">
-    <div class="searchbox">
-        <input type="text" class="search" placeholder="Search for products..."><BR></BR>
-        <h1>Company</h1><br>
-        <select class="Selectsearch">
-            <option value="All">All</option>
-            <option value="Ikea">Ikea</option>
-            <option value="Marcos">Marcos</option>
-            <option value="Caressa">Caressa</option>
-            <option value="Liddy">Liddy</option>
-        </select><BR></BR>
-        <input type="range" class="range" min="10" max="1000" step="5" value="0">
-        <p>Value: $<span class="rangeValue">0</span></p>
+    <div class="header">
+        <button class="AddnewProduct">NEW PRODUCTS</button><BR></BR>
+        <a href="../hom/hom.html"><button class="btnpage">Hom</button></a>
+        <a href="../product/product.html"><button class="btnpage">Products</button></a>
+        <a href="../abaut/abaut.html"><button class="btnpage">Abaut</button></a>
     </div>
-    <div class="box"></div>
- </div>
-    
+    <center>
+
+        <input type="text" class="search" placeholder="Search for products..."><BR></BR>
+    </center>
+    <div class="continerbox">
+        <div class="searchbox">
+            <!-- <button class="sort">SORT</button> -->
+            <select class="SelectAll">
+                <option value="All">All</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+            </select>
+            <h1>Company</h1><br>
+            <select class="Selectsearch">
+                <option value="All">All</option>
+                <option value="Ikea">Ikea</option>
+                <option value="Marcos">Marcos</option>
+                <option value="Caressa">Caressa</option>
+                <option value="Liddy">Liddy</option>
+            </select><BR></BR>
+            <input type="range" class="range" min="0" max="5000" step="0" value="0">
+            <p>Value: $<span class="rangeValue">0</span></p>
+        </div>
+        <div class="box"></div>
+    </div>
+
     <script type="module" src="./jsFail/main.js"></script>
 </body>
+
 </html>

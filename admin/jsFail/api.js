@@ -67,5 +67,33 @@ async function EditUser(updateUser,idx) {
     }
 }
 
+async function checUser(newChec,id){
+  try {
+     await fetch(`${api}/${id}`,{
+            method:"PUT",
+            headers:{"Content-type":"application/json"},
+            body:JSON.stringify(newChec)
+        })
+        get()
+  } catch (error) {
+    console.error(error);
+    
+  }
+}
 
-export {get, SearchUser, selectUser ,rangUser,DeleteUser,EditUser}
+
+async function SelectUser(User) {
+  if( User != "All") {
+    try {
+      let res = await fetch(`${api}?productStatus=${User=="Active"}`);
+      let data = await res.json();
+      getData(data);
+    } catch (error) {
+      console.error(error);
+    }
+  } else {
+    get();
+  }
+}
+
+export {get, SearchUser, selectUser ,rangUser,DeleteUser,EditUser,checUser,SelectUser}

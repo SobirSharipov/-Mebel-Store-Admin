@@ -1,6 +1,7 @@
 *{
     margin: 0px;
 }
+
 .hider{
     padding-top: 10px;
     padding-bottom: 10px;
@@ -31,6 +32,8 @@ img{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 20px;
+     overflow-y: scroll;
+    height: 84vh;
 }
 .card{
     text-align: center;
@@ -188,4 +191,87 @@ letter-spacing: 0%;
 .divimg{
     display: flex;
     gap: 20px;
+}
+i{
+    width: 20px;
+    font-size: 20px;
+   background-color: rgba(255, 255, 255, 0);
+   border: none;
+}
+.White{
+    color: orange;
+     background-color: rgba(255, 255, 255, 0);
+   border: none;
+}
+.Black{
+    color: blue;
+     background-color: rgba(255, 255, 255, 0);
+   border: none;
+}
+.divDarcmode{
+    /* position: fixed; */
+    top: 10px;
+    right: 10px;
+    z-index: 1;
+}
+
+@media (max-width:510px){
+    .hiderhom{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .page > a > span{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .continerbox{
+       display: block;
+        margin-top: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .dialogcart{
+        left: 0px;
+        width: 100%;
+    }
+    .logoimg{
+        margin: auto;
+    }
+    .box{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    .card{
+        width: 180px;
+        background-color: #dddedf;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 10px;
+    }
+    .name{
+        font-size: 16px;
+    }
+    .btnTocart{
+        right: 30px;
+    }
+    .btnInfo{
+        right: 110px;
+       
+    }
+    img{
+        width: 150px;
+        height: 120px;
+    }
+    .searchbox{
+    margin: 20px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    }
+    .imgdialog{
+        width: 120px;
+        height: 100px;
+    }
 }

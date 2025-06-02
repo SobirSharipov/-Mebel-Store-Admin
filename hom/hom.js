@@ -7,6 +7,34 @@ let btnX = document.querySelector(".btnX");
 let Options = document.querySelector(".Options");
 let sheabag = document.querySelector(".sheabag");
 
+
+let body = document.querySelector(".body");
+let Black = document.querySelector(".Black");
+let White = document.querySelector(".White");
+
+let darcMode = localStorage.getItem("theme") || "white";
+body.style.backgroundColor = darcMode;
+Black.onclick = () => {
+  localStorage.setItem("theme", "black");
+  let darcMode = localStorage.getItem("theme");
+  body.style.backgroundColor = darcMode;
+  body.style.color = "white";
+  btnshooping.style.color = "white";
+  searchbox.style.color = "white";
+
+  Black.style.color = "white";
+};
+White.onclick = () => {
+  localStorage.setItem("theme", "white");
+  let darcMode = localStorage.getItem("theme");
+  body.style.backgroundColor = darcMode;
+  body.style.color = "black";
+  searchbox.style.color = "black";
+  btnshooping.style.color = "black";
+  Black.style.color = "blue";
+};
+
+
 let btnback = document.querySelector(".btnback");
 let btnnext = document.querySelector(".btnnext");
 
@@ -23,6 +51,7 @@ let api = "http://localhost:3000/product";
 
 btnX.onclick = () => {
   dialogcart.close();
+  window.location.reload()
 }
 
 async function get() {
@@ -90,6 +119,7 @@ btnshooping.onclick=()=>{
     data = data.filter((el) => el.id !== id);
     localStorage.setItem("data", JSON.stringify(data));
     showCart();
+     
   }
 
 function showCart() {
@@ -97,6 +127,8 @@ function showCart() {
   let data = JSON.parse(localStorage.getItem("data")) || [];
   if (data.length === 0) {
     tablecart.innerHTML = "<h1>Cart is empty</h1>";
+    sheabag.innerHTML = "Total Price: $0";
+    cartspan.innerHTML = "0";
     return;
   }
 
@@ -133,7 +165,7 @@ function showCart() {
     btnplus.classList.add("btnmax")
     btnplus.onclick=()=>{
        let index = data.findIndex((item) => item.id === el.id);
-      if (index !== -1) {
+      if (index !== -1 ) {
         data[index].cnt += 1;
         localStorage.setItem("data", JSON.stringify(data));
         showCart();
@@ -151,7 +183,7 @@ function showCart() {
     btnmin.classList.add("btnmin")
     btnmin.onclick=()=>{
        let index = data.findIndex((item) => item.id === el.id);
-      if (index !== -1) {
+      if (index !== -1 && data[index].cnt > 0) {
         data[index].cnt -= 1;
         localStorage.setItem("data", JSON.stringify(data));
         showCart();

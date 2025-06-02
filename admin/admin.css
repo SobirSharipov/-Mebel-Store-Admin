@@ -1,11 +1,60 @@
 @import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 
 
+
 .box{
     width: 80%;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    /* text-align: center; */
+    overflow-y: scroll;
+    height: 84vh;
 }
+.divStatus{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+input{
+    padding: 10px;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid;
+}
+.Adddialog{
+    background:linear-gradient(145deg,black,blue) ;
+    padding: 20px;
+    border-radius: 10px;
+}
+select{
+    width: 175px;
+    padding: 8px;
+    border-radius: 5px;
+}
+.AddSave{
+    width: 175px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0.788);
+    color: white;
+    margin-left: 15px;
+}
+.Editdialog{
+     background:linear-gradient(145deg,black,blue) ;
+    padding: 20px;
+    border-radius: 10px;
+}
+.EditSave{
+      width: 175px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: rgba(0, 128, 0, 0.788);
+    color: white;
+    margin-left: 15px;
+}
+
 .imgadmin{
     width: 250px;
     height: 200px;
@@ -19,7 +68,7 @@
     margin: 100px;
 }
 .Selectsearch{
-    width: 150px;
+    width: 220px;
     padding: 5px;
     background-color: #BA5D2C;
     color: white;
@@ -27,10 +76,16 @@
     font-size: 20px;
     border-radius: 5px;
 }
+
 .search{
-    width: 200px;
+    width: 500px;
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid;
+  
+}
+.range{
+    width: 200px;
 }
 .Brend{
       font-family: Charm;
@@ -42,4 +97,162 @@ letter-spacing: 0%;
 }
 .size-6{
     width: 20px;
+}
+.AddnewProduct {
+ padding: 10px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+ width: 227px;
+}
+
+.AddnewProduct::before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ height: 100%;
+ width: 0;
+ border-radius: 15px;
+ background-color: #212121;
+ z-index: -1;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 550ms
+}
+
+.AddnewProduct:hover {
+ color: #e8e8e8;
+}
+
+.AddnewProduct:hover::before {
+ width: 100%;
+}
+.btnpage{
+     padding: 10px 25px;
+ border: unset;
+ border-radius: 15px;
+ color: #212121;
+ z-index: 1;
+ background: #e8e8e8;
+ position: relative;
+ font-weight: 1000;
+ font-size: 17px;
+ -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+ transition: all 250ms;
+ overflow: hidden;
+ width: 227px;
+}
+.btnpage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 550ms
+}
+.btnpage:hover {
+    color: #e8e8e8;
+}
+.btnpage:hover::before {
+    width: 100%;
+}
+.btnDelet{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: red;
+
+}
+.btnEdit{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: blue;
+}
+.btnInfo{
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: green;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+}
+.SelectAll{
+     width: 220px;
+    padding: 5px;
+    background-color: #BA5D2C;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+@media (max-width:510px){
+   .header{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+   }
+   .AddnewProduct{
+         width: 100%;
+   }
+   .btnpage{
+        width: 100%;
+   }
+   .search{
+    width: 80%;
+   }
+   .continerbox{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    gap: 20px;
+   }
+   .searchbox{
+    margin: 25px;
+   }
+   .box{
+    width: 70%;
+    grid-template-columns: repeat(1,1fr);
+    height: 70vh;
+    margin: auto;
+   }
+   .Adddialog, .Editdialog {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+   }
+   .Addform > input{
+    width: 96%;
+   }
+    .Addform > select{
+     width: 36%;
+    }
+   .Editform > input{
+    width: 96%;
+   }
+    .Editform > select{
+     width: 36%;
+    }
+
 }
