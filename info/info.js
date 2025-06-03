@@ -42,7 +42,7 @@ Black.onclick = () => {
   body.style.backgroundColor = darcMode;
   body.style.color = "white";
   btnshooping.style.color = "white";
-  searchbox.style.color = "white";
+  // searchbox.style.color = "white";
 
   Black.style.color = "white";
 };
@@ -51,7 +51,7 @@ White.onclick = () => {
   let darcMode = localStorage.getItem("theme");
   body.style.backgroundColor = darcMode;
   body.style.color = "black";
-  searchbox.style.color = "black";
+  // searchbox.style.color = "black";
   btnshooping.style.color = "black";
   Black.style.color = "blue";
 };
