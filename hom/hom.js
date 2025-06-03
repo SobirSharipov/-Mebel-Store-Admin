@@ -6,7 +6,23 @@ let cartspan = document.querySelector(".cartspan");
 let btnX = document.querySelector(".btnX");
 let Options = document.querySelector(".Options");
 let sheabag = document.querySelector(".sheabag");
+let btncheckout = document.querySelector(".btncheckout");
 
+btncheckout.onclick = () => {
+  let data = JSON.parse(localStorage.getItem("data")) || [];
+  if (data.length === 0) {
+    alert("Your cart is empty");
+    return;
+  }
+  
+  let totalPrice = data.reduce((sum, el) => sum + (el.productPrase * el.cnt), 0);
+  
+  alert(`Your total price is $${totalPrice}. Thank you for shopping!`);
+  
+  localStorage.removeItem("data");
+  showCart();
+  window.location.reload();
+};
 
 let body = document.querySelector(".body");
 let Black = document.querySelector(".Black");
@@ -20,7 +36,7 @@ Black.onclick = () => {
   body.style.backgroundColor = darcMode;
   body.style.color = "white";
   btnshooping.style.color = "white";
-  searchbox.style.color = "white";
+  // searchbox.style.color = "white";
 
   Black.style.color = "white";
 };
@@ -29,7 +45,7 @@ White.onclick = () => {
   let darcMode = localStorage.getItem("theme");
   body.style.backgroundColor = darcMode;
   body.style.color = "black";
-  searchbox.style.color = "black";
+  // searchbox.style.color = "black";
   btnshooping.style.color = "black";
   Black.style.color = "blue";
 };

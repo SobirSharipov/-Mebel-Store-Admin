@@ -211,6 +211,18 @@ i{
      background-color: rgba(255, 255, 255, 0);
    border: none;
 }
+.btncheckout{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.btncheckout:hover{
+    background-color: darkblue;
+}
 
 @media (max-width:510px){
     .page > a > span{

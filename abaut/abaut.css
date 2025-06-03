@@ -153,6 +153,18 @@ i{
     right: 10px;
     z-index: 1;
 }
+.btncheckout{
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.btncheckout:hover{
+    background-color: darkblue;
+}
 
 @media (max-width: 510px) {
     .dialogcart{

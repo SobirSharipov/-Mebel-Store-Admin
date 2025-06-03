@@ -7,6 +7,24 @@ let cartspan = document.querySelector(".cartspan");
 let btnshooping = document.querySelector(".btnshooping");
 
 
+let btncheckout = document.querySelector(".btncheckout");
+
+btncheckout.onclick = () => {
+  let data = JSON.parse(localStorage.getItem("data")) || [];
+  if (data.length === 0) {
+    alert("Your cart is empty");
+    return;
+  }
+  
+  let totalPrice = data.reduce((sum, el) => sum + (el.productPrase * el.cnt), 0);
+  
+  alert(`Your total price is $${totalPrice}. Thank you for shopping!`);
+  
+  localStorage.removeItem("data");
+  showCart();
+  window.location.reload();
+};
+
 
 let body = document.querySelector(".body");
 let Black = document.querySelector(".Black");
