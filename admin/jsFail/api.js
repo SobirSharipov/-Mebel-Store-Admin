@@ -96,4 +96,14 @@ async function SelectUser(User) {
   }
 }
 
-export {get, SearchUser, selectUser ,rangUser,DeleteUser,EditUser,checUser,SelectUser}
+async function SortUser() {
+  try {
+    let {data}=await axios.get(api)
+    data.sort((a,b)=>a.productName.localeCompare(b.productName))
+    getData(data)
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export {get, SearchUser, selectUser ,rangUser,DeleteUser,EditUser,checUser,SelectUser,SortUser}

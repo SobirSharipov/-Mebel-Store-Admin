@@ -141,10 +141,10 @@
     },
     {
       "productName": "MAxFirma",
-      "productCategori": "Caressa",
-      "productDescription": "nkllkmlmlmlmlsaojlxmaslmxmsalxlmlasmcx",
-      "productImg": "https://berkarar.com.tm/storage/app/uploads/public/64f/581/6f3/64f5816f3569b104085982.jpg",
-      "productPrase": "800",
+      "productCategori": "Ikea",
+      "productDescription": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic  chillwave  trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge ",
+      "productImg": "https://www.angstrem-mebel.ru/upload/resize_cache/iblock/6d2/397_277_2/6d219e786038d1c007443e41c4d55c0a.jpg",
+      "productPrase": "850",
       "productColor": [
         "blue",
         "white",
@@ -153,6 +153,22 @@
       ],
       "productStatus": false,
       "id": "fc16"
+    },
+    {
+      "id": "79b3",
+      "productName": "Albany Sectional",
+      "productCategori": "Caressa",
+      "productDescription": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic  chillwave  trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge ",
+      "productImg": "https://www.stilkuhni.ru/upload/iblock/e3a/rzavqydh3x7z11me9rbw70gmfl9gaq8a/Bedroom_New-Riga_3720-790x500_3.jpg",
+      "productPrase": "700",
+      "productColor": [
+        "red",
+        "black",
+        "blue",
+        "white",
+        "green"
+      ],
+      "productStatus": true
     }
   ],
   "admin": [

@@ -207,6 +207,15 @@ letter-spacing: 0%;
     font-size: 20px;
     border-radius: 5px;
 }
+.sort{
+    width: 220px;
+    padding: 5px;
+    background-color: #BA5D2C;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    border-radius: 5px;
+}
 
 @media (max-width:510px){
    .header{

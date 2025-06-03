@@ -6,6 +6,7 @@ import {
   EditUser,
   checUser,
   SelectUser,
+  SortUser,
   get
 } from "./api.js";
 let api = "http://localhost:3000/product";
@@ -18,8 +19,13 @@ let AddnewProduct = document.querySelector(".AddnewProduct");
 let Adddialog = document.querySelector(".Adddialog");
 let Addform = document.querySelector(".Addform");
 let SelectAll = document.querySelector(".SelectAll");
-// let sort = document.querySelector(".sort");
+let sort = document.querySelector(".sort");
+let EXED = document.querySelector(".EXED");
 
+EXED.onclick = () => {
+  localStorage.removeItem("pasword");
+  window.location = "../login/login.html";
+};
 
 let Editdialog = document.querySelector(".Editdialog");
 let Editform = document.querySelector(".Editform");
@@ -29,7 +35,9 @@ AddnewProduct.onclick = () => {
   Adddialog.showModal();
 };
 
-
+sort.onclick = () => {
+  SortUser();
+};
 
 SelectAll.onclick = () => {
 SelectUser(SelectAll.value);
