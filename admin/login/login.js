@@ -56,6 +56,11 @@ let loginEmail = document.querySelector(".loginEmail")
 let loginpasvord = document.querySelector(".loginpasvord")
 let login = document.querySelector(".login")
 
+let dataAdmin = localStorage.getItem("pasword")
+if (dataAdmin) {
+    window.location = "http://127.0.0.1:5500/admin/admin.html"
+}   
+
 function getData(data) {
     let Pasvord = data.find(User =>
         User.name === loginName.value &&
