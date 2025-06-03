@@ -46,7 +46,7 @@ White.onclick = () => {
   body.style.backgroundColor = darcMode;
   body.style.color = "black";
   // searchbox.style.color = "black";
-  btnshooping.style.color = "black";
+  btnshooping.style.color = "green";
   Black.style.color = "blue";
 };
 
@@ -143,6 +143,7 @@ function showCart() {
   let data = JSON.parse(localStorage.getItem("data")) || [];
   if (data.length === 0) {
     tablecart.innerHTML = "<h1>Cart is empty</h1>";
+     tablecart.style.marginTop = "100px";
     sheabag.innerHTML = "Total Price: $0";
     cartspan.innerHTML = "0";
     return;
